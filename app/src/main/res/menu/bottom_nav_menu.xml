@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_ideas"
+        android:icon="@drawable/outline_lightbulb_24"
+        android:title="@string/title_ideas" />
+
+    <item
+        android:id="@+id/navigation_favorites"
+        android:icon="@drawable/outline_favorite_24"
+        android:title="@string/title_favorites" />
+
+    <item
+        android:id="@+id/navigation_materials"
+        android:icon="@drawable/outline_class_24"
+        android:title="@string/title_materials" />
+
+</menu>
