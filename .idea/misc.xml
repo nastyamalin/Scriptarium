@@ -3,6 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_anthem.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_definitions.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_drama.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_elegy.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_epos.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_favorites.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_genre.xml" value="0.2" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_legend.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_lyric.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_materials.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_myth.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_novela.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_ode_to.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_opinion.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_parable.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_romance.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_song.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_story.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_tale.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_verse.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/genre_layout.xml" value="0.8" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/spinner_item.xml" value="0.20863616930312098" />
         <entry key="..\:/Sproject/app/src/main/res/drawable-v24/outline_class_24.xml" value="0.136" />
         <entry key="..\:/Sproject/app/src/main/res/drawable-v24/outline_favorite_24.xml" value="0.136" />
         <entry key="..\:/Sproject/app/src/main/res/drawable-v24/outline_lightbulb_24.xml" value="0.136" />
@@ -36,6 +59,8 @@
         <entry key="..\:/Sproject/app/src/main/res/layout/materials/fragment_romance.xml" value="0.1546875" />
         <entry key="..\:/Sproject/app/src/main/res/layout/novel_materials_fragment.xml" value="0.18645833333333334" />
         <entry key="..\:/Sproject/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ТЕХНОТОП/.gradle/caches/transforms-3/02e0bd612fca2a22099e175f45d3c7d6/transformed/appcompat-1.4.1/res/layout/support_simple_spinner_dropdown_item.xml" value="0.20863616930312098" />
+        <entry key="..\:/sdk_for_android_studio/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.20863616930312098" />
       </map>
     </option>
   </component>

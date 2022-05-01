@@ -21,5 +21,14 @@
         android:id="@+id/navigation_materials"
         android:name="com.example.sproject.ui.notifications.MaterialsFragment"
         android:label="@string/title_materials"
-        tools:layout="@layout/fragment_materials" />
+        tools:layout="@layout/fragment_materials" >
+        <action
+            android:id="@+id/action_navigation_materials_to_genresFragment"
+            app:destination="@id/genresFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genresFragment"
+        android:name="com.example.sproject.ui.defenitions.GenresFragment"
+        android:label="GenresFragment" />
+
 </navigation>

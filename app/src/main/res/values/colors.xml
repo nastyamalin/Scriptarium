@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#ce93d8</color>
     <color name="purple_light">#ffc4ff</color>
+    <color name="transparent">@android:color/transparent</color>
     <color name="purple_dark">#9c64a6</color>
 </resources>
