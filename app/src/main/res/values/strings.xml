@@ -44,6 +44,11 @@
         <item>Постмодернізм</item>
     </string-array>
 
+    <string-array name="type_of_definitions">
+        <item>Movements</item>
+        <item>Genres</item>
+    </string-array>
+
     <string name="Epos">Епос</string>
     <string name="epos_describe">(дав.-гр. ἔπος — «слово», «оповідання») — різновид літературного роду (нарівні з лірикою і драмою), що розповідає про події, які нібито відбувалися у минулому (немов здійснювалися насправді і згадуються оповідачем).</string>
     <string name="Romance">Роман</string>

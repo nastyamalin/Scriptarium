@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/drawable/background_splash.xml" value="0.2105" />
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_anthem.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_definitions.xml" value="0.22826086956521738" />
