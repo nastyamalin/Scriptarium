@@ -8,13 +8,21 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.example.sproject.R;
 import com.example.sproject.databinding.FragmentDefinitionsBinding;
+import com.example.sproject.ui.defenitions.adapter.DefinitionsRecyclerAdapter;
+import com.example.sproject.ui.defenitions.adapter.OnItemDefinitionsRecyclerClickInterface;
 
-public class MovementsFragment extends Fragment {
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class MovementsFragment extends Fragment implements OnItemDefinitionsRecyclerClickInterface {
 
     private FragmentDefinitionsBinding binding;
-    private int kindOfDefinitions;
+
+
 
     @Nullable
     @Override
@@ -26,17 +34,16 @@ public class MovementsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        setDefinitions();
-        initListeners();
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.literary_movement)));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext());
+        binding.definitionsRecycler.setLayoutManager(layoutManager);
+        DefinitionsRecyclerAdapter adapter = new DefinitionsRecyclerAdapter(arrayList,requireContext(),this);
+        binding.definitionsRecycler.setAdapter(adapter);
     }
 
-    private void initListeners() {
 
-    }
+    @Override
+    public void onItemClick(int position) {
 
-    private void setDefinitions() {
-        switch (kindOfDefinitions){
-
-        }
     }
 }

@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/drawable/background_splash.xml" value="0.2105" />
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/definitions_recycler_item.xml" value="0.20863616930312098" />
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_anthem.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_definitions.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_drama.xml" value="0.22826086956521738" />
@@ -12,6 +13,7 @@
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_epos.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_favorites.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_genre.xml" value="0.2" />
+        <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_home.xml" value="0.20863616930312098" />
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_legend.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_lyric.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidStudio/Scriptarium/app/src/main/res/layout/fragment_materials.xml" value="0.22826086956521738" />
