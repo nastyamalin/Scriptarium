@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Scriptarium</string>
     <string name="title_ideas">Ідеї</string>
-    <string name="title_favorites">Улюблене</string>
+    <string name="title_favorites">Вірші</string>
     <string name="title_materials">Довідка</string>
     <string name="choose_what_you_want_to_learn">Оберіть, що ви хочете вивчити</string>
     <string name="literal_mov">Літературні течії</string>

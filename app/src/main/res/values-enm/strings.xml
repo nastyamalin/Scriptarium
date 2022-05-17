@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name" formatted="false">Scriptarium</string>
     <string name="title_ideas">Idea</string>
-    <string name="title_favorites">Favorites</string>
+    <string name="title_favorites">Poems</string>
     <string name="title_materials">Materials</string>
     <string name="choose_what_you_want_to_learn">Choose what to learn</string>
     <string name="literal_mov">Literal movements</string>

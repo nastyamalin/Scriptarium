@@ -1,13 +1,11 @@
 package com.example.sproject.ui.notifications;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -44,8 +42,7 @@ public class MaterialsFragment extends Fragment {
         binding = FragmentMaterialsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        materialsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
         return root;
     }
 
