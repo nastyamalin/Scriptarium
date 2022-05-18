@@ -35,6 +35,12 @@ public class IdeaFragment extends Fragment {
     private static int counter = 0;
 
     @Override
+    public void onStart() {
+        super.onStart();
+        requireActivity().findViewById(R.id.nav_view).setVisibility(View.VISIBLE);
+    }
+
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         NavHostFragment navHostFragment = (NavHostFragment) requireActivity().getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
