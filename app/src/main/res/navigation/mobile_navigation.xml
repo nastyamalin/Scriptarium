@@ -9,7 +9,11 @@
         android:id="@+id/navigation_ideas"
         android:name="com.example.sproject.ui.home.IdeaFragment"
         android:label="@string/title_ideas"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_ideas_to_notesTakerFragment"
+            app:destination="@id/notesTakerFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_favorites"
@@ -30,5 +34,14 @@
         android:id="@+id/genresFragment"
         android:name="com.example.sproject.ui.defenitions.GenresFragment"
         android:label="GenresFragment" />
+    <fragment
+        android:id="@+id/notesTakerFragment"
+        android:name="com.example.sproject.ui.notesTaker.NotesTakerFragment"
+        android:label="fragment_notes_taker"
+        tools:layout="@layout/fragment_notes_taker" >
+        <action
+            android:id="@+id/action_notesTakerFragment_to_navigation_ideas"
+            app:destination="@id/navigation_ideas" />
+    </fragment>
 
 </navigation>

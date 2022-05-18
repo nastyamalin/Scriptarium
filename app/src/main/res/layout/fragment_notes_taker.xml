@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/purple"
-    tools:context=".NotesTakerActivity">
+    tools:context=".ui.notesTaker.NotesTakerFragment">
     <Toolbar
         android:id="@+id/toolbar_notes"
 

@@ -1,18 +1,17 @@
-package com.example.sproject.Models;
-
+package com.example.sproject.models;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
-//@Entity
-public class Verse implements Serializable {
+@Entity(tableName = "notes")
+public class Notes implements Serializable {
     @PrimaryKey(autoGenerate = true)
     int ID = 0;
     @ColumnInfo(name = "title")
     String title = "";
-    @ColumnInfo(name = "verse")
-    String verse = "";
+    @ColumnInfo(name = "description")
+    String notes = "";
     @ColumnInfo(name = "date")
     String date = "";
     @ColumnInfo(name = "pinned")
@@ -34,12 +33,12 @@ public class Verse implements Serializable {
         this.title = title;
     }
 
-    public String getVerse() {
-        return verse;
+    public String getNotes() {
+        return notes;
     }
 
-    public void setVerse(String verse) {
-        this.verse = verse;
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 
     public String getDate() {
@@ -58,4 +57,3 @@ public class Verse implements Serializable {
         this.pinned = pinned;
     }
 }
-

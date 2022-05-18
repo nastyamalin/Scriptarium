@@ -1,4 +1,4 @@
-package com.example.sproject.Adapters;
+package com.example.sproject.adapters;
 
 
 import android.content.Context;
@@ -14,7 +14,7 @@ import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.sproject.Models.Notes;
+import com.example.sproject.models.Notes;
 import com.example.sproject.NotesClickListener;
 import com.example.sproject.R;
 
@@ -55,19 +55,11 @@ public class NotesListAdapter extends RecyclerView.Adapter<NotesViewHolder> {
         }
         int color_code = getRandomColor();
         holder.notes_container.setCardBackgroundColor(holder.itemView.getResources().getColor(color_code, null));
-        holder.notes_container.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                listener.onClick(list.get(holder.getAdapterPosition()));
-            }
-        });
+        holder.notes_container.setOnClickListener(view -> listener.onClick(list.get(holder.getAdapterPosition())));
 
-        holder.notes_container.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                listener.onLongClick(list.get(holder.getAdapterPosition()), holder.notes_container);
-                return true;
-            }
+        holder.notes_container.setOnLongClickListener(view -> {
+            listener.onLongClick(list.get(holder.getAdapterPosition()), holder.notes_container);
+            return true;
         });
     }
     private int getRandomColor(){
@@ -101,10 +93,10 @@ class NotesViewHolder extends RecyclerView.ViewHolder {
     public ImageView imageView_pin;
     public NotesViewHolder(@NonNull View itemView){
         super(itemView);
-        notes_container=itemView.findViewById(R.id.notes_container);
-        notes_container=itemView.findViewById(R.id.textView_title);
-        notes_container=itemView.findViewById(R.id.textView_notes);
-        notes_container=itemView.findViewById(R.id.textView_date);
-        notes_container=itemView.findViewById(R.id.ImageView_pin);
+        notes_container = itemView.findViewById(R.id.notes_container);
+        textView_title = itemView.findViewById(R.id.textView_title);
+        textView_notes =itemView.findViewById(R.id.textView_notes);
+        textView_date =itemView.findViewById(R.id.textView_date);
+        imageView_pin =itemView.findViewById(R.id.ImageView_pin);
     }
 }
