@@ -85,6 +85,8 @@
 </string>
     <string name="Drama">Драма</string>
     <string name="Drama_describe">(дав.-гр. δρᾶμα — «дія», «діяння», «дійство») — один з літературних родів, який змальовує світ у формі дії, здебільшого призначений для сценічного втілення.</string>
+    <string name="literary_flows">Літературні течії</string>
+    <string name="literary_genres">Жанри</string>
 
 
 </resources>

@@ -56,7 +56,6 @@ public class IdeaFragment extends Fragment implements PopupMenu.OnMenuItemClickL
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         binding.fabAdd.setOnClickListener(view1 -> {
             Intent intent = new Intent(requireContext(), NotesTakerActivity.class);
             startActivityForResult(intent, 101);
@@ -67,7 +66,7 @@ public class IdeaFragment extends Fragment implements PopupMenu.OnMenuItemClickL
             notes = database.mainDAO().getAll();
         }
         updateRecycler(notes);
-
+        showEmptyAnimation();
         binding.searchViewHome.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
@@ -129,6 +128,7 @@ public class IdeaFragment extends Fragment implements PopupMenu.OnMenuItemClickL
         binding.recyclerHome.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
         notesListAdapter= new NotesListAdapter(requireContext(), notes, notesClickListener);
         binding.recyclerHome.setAdapter(notesListAdapter);
+
     }
     private final NotesClickListener notesClickListener = new NotesClickListener() {
         @Override
@@ -179,6 +179,14 @@ public class IdeaFragment extends Fragment implements PopupMenu.OnMenuItemClickL
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    private void showEmptyAnimation(){
+       if (notesListAdapter.getItemCount() == 0){
+           binding.emptyAnimationHome.setVisibility(View.VISIBLE);
+       } else {
+           binding.emptyAnimationHome.setVisibility(View.GONE);
+       }
     }
 
     public void setContentView(int contentView) {

@@ -6,76 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".ui.notifications.MaterialsFragment">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="222dp"
-        android:layout_height="48dp"
-        android:text="@string/genres"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner2"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/info_tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
-        app:layout_constraintVertical_bias="0.355" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="217dp"
-        android:layout_height="79dp"
-        android:background="@color/purple_light"
-        android:entries="@array/literary_movement"
-        app:layout_constraintBottom_toTopOf="@+id/spinner2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.696"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="388dp"
-        android:layout_height="59dp"
-        android:text="@string/literal_mov"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.565"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="217dp"
-        android:layout_height="79dp"
-        android:layout_marginBottom="124dp"
-        android:background="@color/purple_light"
-
-        android:entries="@array/genres_names"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/info_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
-
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="313dp"
-        android:layout_height="72dp"
-        android:background="@color/purple_light"
-        android:text="@string/choose_what_you_want_to_learn"
-        android:textColor="@color/black"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.622"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.51" />
+        app:layout_constraintTop_toBottomOf="@+id/info_tabLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
