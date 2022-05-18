@@ -31,7 +31,7 @@ public interface MainDAO {
     void pin(int id, boolean pin);
 
 
-    @Insert(onConflict = REPLACE)
-    void insert(Verse verse);
+//    @Insert(onConflict = REPLACE)
+//    void insert(Verse verse);
 
 }
