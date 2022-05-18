@@ -22,9 +22,7 @@ public class FavoritesFragment extends Fragment {
                 new ViewModelProvider(this).get(FavoritesViewModel.class);
 
         binding = FragmentFavoritesBinding.inflate(inflater, container, false);
-
-        View root = binding.getRoot();
-        return root;
+        return binding.getRoot();
     }
 
         @Override

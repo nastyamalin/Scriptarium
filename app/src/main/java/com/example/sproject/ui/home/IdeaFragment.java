@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
@@ -70,7 +71,6 @@ public class IdeaFragment extends Fragment {
         initListeners();
         initObservers();
 //        setSearch();
-        showEmptyAnimation();
     }
 
     private void setSearch() {
@@ -89,11 +89,20 @@ public class IdeaFragment extends Fragment {
     }
 
     private void initObservers() {
-        ideaViewModel.notesList.observe(getViewLifecycleOwner(), this::updateRecycler);
+        ideaViewModel.notesList.observe(getViewLifecycleOwner(), new Observer<List<Notes>>() {
+            @Override
+            public void onChanged(List<Notes> notes) {
+                updateRecycler(notes);
+                showEmptyAnimation();
+            }
+        });
+
     }
 
     private void initListeners() {
-        binding.fabAdd.setOnClickListener(view1 -> navController.navigate(R.id.action_navigation_ideas_to_notesTakerFragment));
+        binding.fabAdd.setOnClickListener(view1 -> {
+            navController.navigate(R.id.action_navigation_ideas_to_notesTakerFragment);
+        });
     }
 
     private void filter() {
@@ -188,7 +197,7 @@ public class IdeaFragment extends Fragment {
     @Override
     public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
-        if (counter>0){
+        if (counter > 0) {
             ideaViewModel.getNotesList();
         }
         counter++;
@@ -200,14 +209,13 @@ public class IdeaFragment extends Fragment {
         binding = null;
     }
 
-    private void showEmptyAnimation(){
-       if (notesListAdapter.getItemCount() == 0){
-           binding.emptyAnimationHome.setVisibility(View.VISIBLE);
-       } else {
-           binding.emptyAnimationHome.setVisibility(View.GONE);
-       }
+    private void showEmptyAnimation() {
+        if (notesListAdapter.getItemCount() == 0) {
+            binding.emptyAnimationHome.setVisibility(View.VISIBLE);
+        } else {
+            binding.emptyAnimationHome.setVisibility(View.GONE);
+        }
     }
-
 
 
 }

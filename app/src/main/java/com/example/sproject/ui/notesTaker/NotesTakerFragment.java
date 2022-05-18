@@ -2,8 +2,6 @@ package com.example.sproject.ui.notesTaker;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -12,10 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.sproject.R;
-import com.example.sproject.models.Notes;
 import com.example.sproject.databinding.FragmentNotesTakerBinding;
+import com.example.sproject.models.Notes;
 import com.example.sproject.ui.home.IdeaViewModel;
 
 import java.text.SimpleDateFormat;
@@ -68,8 +67,8 @@ public class NotesTakerFragment extends Fragment {
         notes.setNotes(description);
         notes.setDate(formatter.format(date));
         ideaViewModel.updateNote(notes);
+        NavHostFragment.findNavController(this).navigate(R.id.action_notesTakerFragment_to_navigation_ideas);
     }
-
 
 
     @Override
