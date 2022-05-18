@@ -61,10 +61,10 @@ public class IdeaFragment extends Fragment {
         binding.recyclerHome.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
         notesListAdapter = new NotesListAdapter(requireContext(), notes, notesClickListener);
 
-
         initListeners();
         initObservers();
 //        setSearch();
+        showEmptyAnimation();
     }
 
     private void setSearch() {
@@ -193,6 +193,16 @@ public class IdeaFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+    private void showEmptyAnimation(){
+       if (notesListAdapter.getItemCount() == 0){
+           binding.emptyAnimationHome.setVisibility(View.VISIBLE);
+       } else {
+           binding.emptyAnimationHome.setVisibility(View.GONE);
+       }
+    }
+
+
 
 }
 

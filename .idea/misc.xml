@@ -66,6 +66,13 @@
         <entry key="..\:/Sproject/app/src/main/res/layout/materials/fragment_romance.xml" value="0.1546875" />
         <entry key="..\:/Sproject/app/src/main/res/layout/novel_materials_fragment.xml" value="0.18645833333333334" />
         <entry key="..\:/Sproject/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/activity_notes_taker.xml" value="0.25" />
+        <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/fragment_favorites.xml" value="0.264" />
+        <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/fragment_literary_flow.xml" value="0.25" />
+        <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/fragment_literary_genres.xml" value="0.25" />
+        <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/fragment_materials.xml" value="0.25" />
         <entry key="..\:/Users/ТЕХНОТОП/.gradle/caches/transforms-3/02e0bd612fca2a22099e175f45d3c7d6/transformed/appcompat-1.4.1/res/layout/support_simple_spinner_dropdown_item.xml" value="0.20863616930312098" />
         <entry key="..\:/sdk_for_android_studio/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.20863616930312098" />
       </map>
