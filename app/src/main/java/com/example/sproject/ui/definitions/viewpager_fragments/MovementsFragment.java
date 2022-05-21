@@ -1,4 +1,4 @@
-package com.example.sproject.ui.defenitions;
+package com.example.sproject.ui.definitions.viewpager_fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.sproject.R;
 import com.example.sproject.databinding.FragmentDefinitionsBinding;
-import com.example.sproject.ui.defenitions.adapter.DefinitionsRecyclerAdapter;
-import com.example.sproject.ui.defenitions.adapter.OnItemDefinitionsRecyclerClickInterface;
+import com.example.sproject.ui.definitions.adapter.DefinitionsRecyclerAdapter;
+import com.example.sproject.ui.definitions.OnItemDefinitionsRecyclerClickInterface;
 
 import java.util.ArrayList;
 import java.util.Arrays;

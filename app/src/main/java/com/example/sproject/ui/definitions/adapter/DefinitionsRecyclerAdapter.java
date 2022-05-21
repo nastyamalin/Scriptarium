@@ -1,4 +1,4 @@
-package com.example.sproject.ui.defenitions.adapter;
+package com.example.sproject.ui.definitions.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sproject.R;
+import com.example.sproject.ui.definitions.OnItemDefinitionsRecyclerClickInterface;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.sproject.ui.notifications;
+package com.example.sproject.ui.definitions;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.sproject.R;
 import com.example.sproject.databinding.FragmentMaterialsBinding;
-import com.example.sproject.ui.notifications.adapter.ViewPagerAdapter;
+import com.example.sproject.ui.definitions.adapter.ViewPagerAdapter;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 public class MaterialsFragment extends Fragment {

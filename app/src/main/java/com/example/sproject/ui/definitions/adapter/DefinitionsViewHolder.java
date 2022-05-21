@@ -1,4 +1,4 @@
-package com.example.sproject.ui.defenitions.adapter;
+package com.example.sproject.ui.definitions.adapter;
 
 import android.view.View;
 import android.widget.TextView;
@@ -8,6 +8,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sproject.R;
+import com.example.sproject.ui.definitions.OnItemDefinitionsRecyclerClickInterface;
 
 public class DefinitionsViewHolder extends RecyclerView.ViewHolder {
 

@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/navigation_materials"
-        android:name="com.example.sproject.ui.notifications.MaterialsFragment"
+        android:name="com.example.sproject.ui.definitions.MaterialsFragment"
         android:label="@string/title_materials"
         tools:layout="@layout/fragment_materials" >
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/genresFragment"
-        android:name="com.example.sproject.ui.defenitions.GenresFragment"
+        android:name="com.example.sproject.ui.definitions.viewpager_fragments.GenresFragment"
         android:label="GenresFragment" />
     <fragment
         android:id="@+id/notesTakerFragment"
