@@ -8,6 +8,7 @@
     <string name="genres">Жанри</string>
     <string name="literary_flows">Літературні течії</string>
     <string name="literary_genres">Жанри</string>
+    <string name="ok">OK</string>
 
     <string-array name="genres_names">
         <item>Епос</item>
