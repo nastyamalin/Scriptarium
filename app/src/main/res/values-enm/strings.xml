@@ -3,44 +3,14 @@
     <string name="title_ideas">Idea</string>
     <string name="title_favorites">Poems</string>
     <string name="title_materials">Materials</string>
-    <string name="choose_what_you_want_to_learn">Choose what to learn</string>
     <string name="literal_mov">Literal movements</string>
     <string name="genres">Genres</string>
-    <string name="Epos">Epos</string>
-    <string name="epos_describe">(ἔπος - a "word", a "story") is a variety of literary family(equally with a lyric poetry and drama), that tells about events that allegedly took place in the past(as if came true in actual fact and remembered by retell).</string>
-    <string name="Romance">Romance</string>
-    <string name="Romance_describe">large on a volume and difficult after a structure epic work important and difficult public processes are widely overcame in that, all-round and numerous personages are shown in development.</string>
-    <string name="story">Story</string>
-    <string name="story_describe">epic prosaic work(rarer written in verse) that is characterized an unilinear plot, and after the breadth of scope of the vital phenomena and in depth their opening an intermediate place will take a seat between a novel and story.</string>
-    <string name="Opinion">Opinion</string>
-    <string name="Opinion_describe">small prosaic work a plot of that is base on certain(rarely a few) episode from one(sometimes a few) life to the personage.</string>
-    <string name="Novela_describe">small prosaic work a plot of that is base on certain(rarely a few) episode from one(sometimes a few) life to the personage.</string>
-    <string name="Novela">Novela</string>
-    <string name="Parable">Parable</string>
-    <string name="Parable_describe">short folklore or literary narrative work of instructive character, oriented mainly to the allegoric form of leading to of maintenance of ethic values of existence</string>
-    <string name="Legend">Legend</string>
-    <string name="Legend_describe">folk conversation or recital is of some events or life of people, obvolute fabulousness, fantasy</string>
-    <string name="Myth">Myth</string>
-    <string name="Myth_describe">ancient folk story about the phenomena of nature, historical events and others like that or fantastic recitals of Gods, adorable heroes, imaginary creatures.</string>
-    <string name="Tale">Tale</string>
-    <string name="Tale_describe">folklore narrative work about invented, and often and fantastic events..</string>
-    <string name="Lyric">Lyric</string>
-    <string name="Lyric_describe">(грец. lyrikós - lyre; work executed under accompaniment of lyre) - one of three luing-ins of fiction and art in that in form естетизованих experiencing essence of human existence is comprehended; does not have a sharp-edged plot‚ for her characteristic verse form‚ plenty of artistic facilities‚ high level of emotionality.
-</string>
-    <string name="Song">Song</string>
-    <string name="Song_describe"> verse of lyric or lyrico-epic character, melodious after the intonation picture and intended for singing.</string>
-    <string name="Verse">Verse</string>
-    <string name="Verse_describe">small poetic work written with a ритмізованою language, mostly with rhyming of lines</string>
-    <string name="Ode_to">Ode to</string>
-    <string name="Ode_to_describe">verse, that expresses the elevated feelings, caused by important historical events, activity of historical persons.</string>
-    <string name="Anthem">Anthem</string>
-    <string name="Anthem_describe">solemn song accepted as a state or social symbol; a piece of music of solemn character is in the, symphonic, choral opera.</string>
-    <string name="Elegy">Elegy</string>
-    <string name="Elegy_describe">it is work of meditation character, sad key, poetic with a plot basis of that is an emotional reaction on certain events, situation, psychical impulses(it is heard, mentioned, пережите) or certain emotional state of lyric "Я", that is overcame by a melancholy, sorrow, even suffering.
-</string>
-    <string name="Drama">Drama</string>
-    <string name="Drama_describe">(дав.-гр. δρᾶμα it is a "action", "act", "action") - one of literary luing-ins, that represents the world in form action, mostly intended for a stage embodiment.</string>
-
+    <string name="literary_flows">literary movements</string>
+    <string name="literary_genres">Genres</string>
+    <string-array name="type_of_definitions">
+        <item>Movements</item>
+        <item>Genres</item>
+    </string-array>
     <string-array name="genres_names">
         <item>Epos</item>
         <item>Romance</item>
@@ -58,7 +28,96 @@
         <item>Anthem</item>
         <item>Elegy</item>
         <item>Drama</item>
+    </string-array>
+    <string name="Epos">Epos</string>
+    <string name="Romance">Romance</string>
+    <string name="story">Story</string>
+    <string name="Opinion">Opinion</string>
+    <string name="Novela">Novela</string>
+    <string name="Parable">Parable</string>
+    <string name="Legend">Legend</string>
+    <string name="Myth">Myth</string>
+    <string name="Tale">Tale</string>
+    <string name="Lyric">Lyric</string>
+    <string name="Song">Song</string>
+    <string name="Verse">Verse</string>
+    <string name="Ode_to">Ode to</string>
+    <string name="Anthem">Anthem</string>
+    <string name="Elegy">Elegy</string>
+    <string name="Drama">Drama</string>
 
+
+    <string name="epos_describe">(ἔπος - a "word", a "story") is a variety of literary family(equally with a lyric poetry and drama), that tells about
+        events that allegedly took place in the past(as if came true in actual fact and remembered by retell).
+    </string>
+    <string name="Romance_describe">large on a volume and difficult after a structure epic work important and difficult public processes are widely
+        overcame in that, all-round and numerous personages are shown in development.
+    </string>
+    <string name="story_describe">epic prosaic work(rarer written in verse) that is characterized an unilinear plot, and after the breadth of scope of
+        the vital phenomena and in depth their opening an intermediate place will take a seat between a novel and story.
+    </string>
+    <string name="Opinion_describe">small prosaic work a plot of that is base on certain(rarely a few) episode from one(sometimes a few) life to the
+        personage.
+    </string>
+    <string name="Novela_describe">small prosaic work a plot of that is base on certain(rarely a few) episode from one(sometimes a few) life to the
+        personage.
+    </string>
+    <string name="Parable_describe">short folklore or literary narrative work of instructive character, oriented mainly to the allegoric form of leading
+        to of maintenance of ethic values of existence
+    </string>
+    <string name="Legend_describe">folk conversation or recital is of some events or life of people, obvolute fabulousness, fantasy
+    </string>
+    <string name="Myth_describe">ancient folk story about the phenomena of nature, historical events and others like that or fantastic recitals of Gods,
+        adorable heroes, imaginary creatures.</string>
+    <string name="Tale_describe">folklore narrative work about invented, and often and fantastic events..</string>
+    <string name="Lyric_describe">(грец. lyrikós - lyre; work executed under accompaniment of lyre) - one of three luing-ins of fiction and art in that
+        in form естетизованих experiencing essence of human existence is comprehended; does not have a sharp-edged plot‚ for her characteristic verse
+        form‚ plenty of artistic facilities‚ high level of emotionality.
+</string>
+    <string name="Song_describe"> verse of lyric or lyrico-epic character, melodious after the intonation picture and intended for singing.</string>
+    <string name="Verse_describe">small poetic work written with a ритмізованою language, mostly with rhyming of lines</string>
+    <string name="Ode_to_describe">verse, that expresses the elevated feelings, caused by important historical events, activity of historical persons.</string>
+    <string name="Anthem_describe">solemn song accepted as a state or social symbol; a piece of music of solemn character is in the, symphonic, choral
+        opera.</string>
+    <string name="Elegy_describe">it is work of meditation character, sad key, poetic with a plot basis of that is an emotional reaction on certain
+        events, situation, psychical impulses(it is heard, mentioned, пережите) or certain emotional state of lyric "Я", that is overcame by a
+        melancholy, sorrow, even suffering.
+</string>
+    <string name="Drama_describe">(дав.-гр. δρᾶμα it is a "action", "act", "action") - one of literary luing-ins, that represents the world in form
+        action, mostly intended for a stage embodiment.</string>
+
+
+
+
+    <string-array name="genres_description">
+        <item>(ἔπος - a "word", a "story") is a variety of literary family(equally with a lyric poetry and drama), that tells about events that allegedly took place in the past(as if came true in actual fact and remembered by retell).</item>
+        <item>large on a volume and difficult after a structure epic work important and difficult public processes are widely
+        overcame in that, all-round and numerous personages are shown in development.</item>
+        <item>epic prosaic work(rarer written in verse) that is characterized an unilinear plot, and after the breadth of scope of
+        the vital phenomena and in depth their opening an intermediate place will take a seat between a novel and story.</item>
+        <item>small prosaic work a plot of that is base on certain(rarely a few) episode from one(sometimes a few) life to the
+        personage.</item>
+        <item>small prosaic work a plot of that is base on certain(rarely a few) episode from one(sometimes a few) life to the
+        personage.</item>
+        <item>short folklore or literary narrative work of instructive character, oriented mainly to the allegoric form of leading
+        to of maintenance of ethic values of existence</item>
+        <item>folk conversation or recital is of some events or life of people, obvolute fabulousness, fantasy</item>
+        <item>ancient folk story about the phenomena of nature, historical events and others like that or fantastic recitals of Gods,
+        adorable heroes, imaginary creatures</item>
+        <item>folklore narrative work about invented, and often and fantastic events..</item>
+        <item>(грец. lyrikós - lyre; work executed under accompaniment of lyre) - one of three luing-ins of fiction and art in that
+        in form естетизованих experiencing essence of human existence is comprehended; does not have a sharp-edged plot‚ for her characteristic verse
+        form‚ plenty of artistic facilities‚ high level of emotionality.</item>
+        <item>verse of lyric or lyrico-epic character, melodious after the intonation picture and intended for singing.</item>
+        <item>small poetic work written with a ритмізованою language, mostly with rhyming of lines</item>
+        <item>verse, that expresses the elevated feelings, caused by important historical events, activity of historical persons.</item>
+        <item>solemn song accepted as a state or social symbol; a piece of music of solemn character is in the, symphonic, choral
+        opera.</item>
+        <item>it is work of meditation character, sad key, poetic with a plot basis of that is an emotional reaction on certain
+        events, situation, psychical impulses(it is heard, mentioned, пережите) or certain emotional state of lyric "Я", that is overcame by a
+        melancholy, sorrow, even suffering.</item>
+        <item>(дав.-гр. δρᾶμα it is a "action", "act", "action") - one of literary luing-ins, that represents the world in form
+        action, mostly intended for a stage embodiment.</item>
     </string-array>
     <string-array name="literary_movement">
         <item>Baroco</item>
