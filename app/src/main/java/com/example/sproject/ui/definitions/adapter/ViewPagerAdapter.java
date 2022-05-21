@@ -5,29 +5,25 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.sproject.ui.definitions.MaterialsFragment;
-import com.example.sproject.ui.definitions.viewpager_fragments.GenresFragment;
-import com.example.sproject.ui.definitions.viewpager_fragments.MovementsFragment;
+
+import java.util.ArrayList;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
-    private static final int pagesCount = 2;
+    private final ArrayList<Fragment> viewPagerFragments;
 
-    public ViewPagerAdapter(@NonNull MaterialsFragment materialsFragment) {
+    public ViewPagerAdapter(@NonNull MaterialsFragment materialsFragment, ArrayList<Fragment> fragmentsList) {
         super(materialsFragment);
-
+        this.viewPagerFragments = fragmentsList;
     }
 
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        switch (position) {
-            case 0: return new GenresFragment();
-            case 1: return new MovementsFragment();
-            default: return null;
-        }
+        return viewPagerFragments.get(position);
     }
 
     @Override
     public int getItemCount() {
-        return pagesCount;
+        return viewPagerFragments.size();
     }
 }
