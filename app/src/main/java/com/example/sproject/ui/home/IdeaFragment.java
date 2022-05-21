@@ -4,12 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
@@ -59,42 +59,34 @@ public class IdeaFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ideaViewModel = new ViewModelProvider(this).get(IdeaViewModel.class);
         ideaViewModel.getNotesList();
-
-//        database = RoomDB.gerInstance(requireContext());
-//
-//        if (database != null) {
-//            notes = database.mainDAO().getAll();
-//        }
         binding.recyclerHome.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
         notesListAdapter = new NotesListAdapter(requireContext(), notes, notesClickListener);
 
         initListeners();
         initObservers();
-//        setSearch();
     }
 
     private void setSearch() {
-//        binding.searchViewHome.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String s) {
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String s) {
-//                filter();
-//                return true;
-//            }
-//        });
+        binding.searchViewHome.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                filter(s.trim());
+                return true;
+            }
+        });
     }
 
     private void initObservers() {
-        ideaViewModel.notesList.observe(getViewLifecycleOwner(), new Observer<List<Notes>>() {
-            @Override
-            public void onChanged(List<Notes> notes) {
-                updateRecycler(notes);
-                showEmptyAnimation();
-            }
+        ideaViewModel.notesList.observe(getViewLifecycleOwner(), notesList -> {
+            notes = notesList;
+            updateRecycler(notesList);
+            showEmptyAnimation();
+            setSearch();
         });
 
     }
@@ -105,15 +97,20 @@ public class IdeaFragment extends Fragment {
         });
     }
 
-    private void filter() {
+    private void filter(String s) {
         List<Notes> filteredList = new ArrayList<>();
         for (Notes singleNote : notes) {
-            if (singleNote.getTitle().toLowerCase().contains("newText".toLowerCase())
-                    || singleNote.getNotes().toLowerCase().contains("newText".toLowerCase())) {
+            if (singleNote.getTitle().toLowerCase().contains(s.toLowerCase())
+                    || singleNote.getNotes().toLowerCase().contains(s.toLowerCase())) {
                 filteredList.add(singleNote);
             }
         }
-        notesListAdapter.filteredList(filteredList);
+        if (!filteredList.isEmpty()){
+            notesListAdapter.setList(filteredList);
+        }else{
+            notesListAdapter.setList(new ArrayList<>());
+        }
+
     }
 
 //    @Override
