@@ -50,7 +50,7 @@ public class MovementsFragment extends Fragment implements OnItemDefinitionsRecy
     public void onItemClick(int position) {
         dialog.show();
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialog.findViewById(R.id.dialog_container).setBackgroundColor(getResources().getColor(R.color.transparent));
+        dialog.getWindow().setBackgroundDrawableResource(R.color.transparent);
         TextView text = dialog.findViewById(R.id.details_text);
        // ArrayList<String> genresArray = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.movements_description)));
        // text.setText(genresArray.get(position));

@@ -42,12 +42,16 @@
         <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/activity_notes_taker.xml" value="0.25" />
         <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/alert_dialog_details.xml" value="0.2" />
+        <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/definitions_recycler_item.xml" value="0.25" />
+        <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/dialog_details.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/fragment_definitions.xml" value="0.25" />
         <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/fragment_favorites.xml" value="0.264" />
         <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/fragment_literary_flow.xml" value="0.25" />
         <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/fragment_literary_genres.xml" value="0.25" />
         <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/fragment_materials.xml" value="0.25" />
         <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/fragment_notes_taker.xml" value="0.25" />
+        <entry key="..\:/Users/Bogdan/StudioProjects/Scriptarium/app/src/main/res/layout/notes_list.xml" value="0.25" />
       </map>
     </option>
   </component>
