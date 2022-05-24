@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/purple"
+    android:background="@color/purple_light"
     tools:context=".ui.notesTaker.NotesTakerFragment">
-    <Toolbar
+    <MaterialToo
         android:id="@+id/toolbar_notes"
-
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
         <RelativeLayout
@@ -26,7 +25,7 @@
                 android:src="@drawable/ic_baseline_save_24" />
         </RelativeLayout>
 
-    </Toolbar>
+    </MaterialToo>
 
     <EditText
         android:id="@+id/editText_title"

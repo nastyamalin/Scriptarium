@@ -76,8 +76,9 @@ public class IdeaFragment extends Fragment {
             @Override
             public boolean onQueryTextChange(String s) {
                 filter(s.trim());
-                return true;
+                return false;
             }
+
         });
     }
 

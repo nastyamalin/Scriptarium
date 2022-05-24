@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_light"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".ui.dashboard.FavoritesFragment">
 
@@ -30,7 +30,7 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
         android:layout_margin="16dp"
-        android:background="@color/purple_dark"
+        android:background="@color/purple_light"
         android:iconifiedByDefault="false"
         android:queryHint="Search verse..."
         app:layout_constraintEnd_toEndOf="parent"
