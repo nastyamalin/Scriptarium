@@ -17,9 +17,13 @@
 
     <fragment
         android:id="@+id/navigation_favorites"
-        android:name="com.example.sproject.ui.dashboard.FavoritesFragment"
+        android:name="com.example.sproject.ui.verse.VerseFragment"
         android:label="@string/title_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_verse" >
+        <action
+            android:id="@+id/action_navigation_favorites_to_verseTakerFragment"
+            app:destination="@id/verseTakerFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_materials"
@@ -42,6 +46,15 @@
         <action
             android:id="@+id/action_notesTakerFragment_to_navigation_ideas"
             app:destination="@id/navigation_ideas" />
+    </fragment>
+    <fragment
+        android:id="@+id/verseTakerFragment"
+        android:name="com.example.sproject.ui.verseTaker.VerseTakerFragment"
+        android:label="fragment_verse_taker"
+        tools:layout="@layout/fragment_verse_taker" >
+        <action
+            android:id="@+id/action_verseTakerFragment_to_navigation_favorites"
+            app:destination="@id/navigation_favorites" />
     </fragment>
 
 </navigation>

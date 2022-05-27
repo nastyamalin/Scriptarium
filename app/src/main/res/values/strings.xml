@@ -8,7 +8,7 @@
     <string name="genres">Жанри</string>
     <string name="literary_flows">Літературні течії</string>
     <string name="literary_genres">Жанри</string>
-    <string name="ok">OK</string>
+    <string name="ok" translatable="false">OK</string>
 
     <string-array name="genres_names">
         <item>Епос</item>
@@ -141,6 +141,10 @@
         <item> напрям у філософії XX століття, що позиціонує і досліджує людину як унікальну духовну істоту, що здатна до вибору власної долі.</item>
         <item>літературна течія, що виникла у США та Європі в кінці XX століття, естетичну природу якої пов’язують із плюралізмом —концепція наявності безлічі різних поглядів, позицій, ідей та інтересів в один і той самий час.</item>
 </string-array>
+    <string name="add_ideas">Напишіть ідею</string>
+    <string name="title">Назва</string>
+    <string name="add_verses">Напишіть свій вірш</string>
+    <string name="title_verse">Назва</string>
 
 
 </resources>

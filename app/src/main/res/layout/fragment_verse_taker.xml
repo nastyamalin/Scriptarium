@@ -6,10 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/purple_light"
-    tools:context=".ui.notesTaker.NotesTakerFragment">
+    tools:context=".ui.verseTaker.VerseTakerFragment">
     <Toolbar
         android:id="@+id/toolbar_notes"
-
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
         <RelativeLayout
@@ -32,7 +31,7 @@
         android:id="@+id/editText_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/title"
+        android:hint="@string/title_verse"
         android:minHeight="48dp"
         android:padding="8dp"
         android:singleLine="true"
@@ -42,10 +41,10 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editText_notes"
+        android:id="@+id/editText_verse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/add_ideas"
+        android:hint="@string/add_verses"
         android:minHeight="48dp"
         android:padding="8dp"
         android:textColor="@color/white"
