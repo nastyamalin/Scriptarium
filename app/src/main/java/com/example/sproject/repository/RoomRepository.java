@@ -36,9 +36,15 @@ public class RoomRepository {
         return  verseArrayList;
     }
     public void updateNote(Notes notes){
+
+    public void addNote(Notes notes){
         new Thread(() -> mainDAO.insert(notes)).start();
     }
     public  void updateVerse(Verse verse){
         new Thread(() -> verseDAO.insert(verse)).start();
+    }
+
+    public void updatePin(Notes notes,boolean pin){
+        new Thread(() -> mainDAO.pin(notes.getID(),pin)).start();
     }
 }
