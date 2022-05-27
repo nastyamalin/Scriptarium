@@ -57,8 +57,6 @@ public class VerseFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        VerseViewModel verseViewModel =
-                new ViewModelProvider(this).get(VerseViewModel.class);
 
         binding = FragmentVerseBinding.inflate(inflater, container, false);
         return binding.getRoot();
@@ -70,7 +68,7 @@ public class VerseFragment extends Fragment {
         verseViewModel = new ViewModelProvider(this).get(VerseViewModel.class);
         verseViewModel.getVerseList();
         binding.recyclerVerse.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
-        verseListAdapter = new VerseListAdapter(requireContext(), verse, verseClickListener);
+//        verseListAdapter = new VerseListAdapter(requireContext(), verse, verseClickListener);
 
         initListeners();
         initObservers();

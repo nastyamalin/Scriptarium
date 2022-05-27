@@ -24,7 +24,7 @@ import java.util.Random;
 
 public class VerseListAdapter extends RecyclerView.Adapter<VerseViewHolder> {
     Context context;
-    List<Verse> list;
+    List<Verse> list = new ArrayList<>();
     VerseClickListener listener;
 
     public VerseListAdapter(Context context, List<Verse> list, VerseClickListener listener) {
@@ -73,7 +73,7 @@ public class VerseListAdapter extends RecyclerView.Adapter<VerseViewHolder> {
     @NonNull
     @Override
     public VerseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new VerseViewHolder(LayoutInflater.from(context).inflate(R.layout.notes_list, parent, false));
+        return new VerseViewHolder(LayoutInflater.from(context).inflate(R.layout.favorites_list, parent, false));
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
