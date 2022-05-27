@@ -21,8 +21,12 @@ public class IdeaViewModel extends ViewModel {
         notesList = roomRepository.getAllNotes();
     }
 
-    public void updateNote(Notes notes) {
-        roomRepository.updateNote(notes);
+    public void addNote(Notes notes) {
+        roomRepository.addNote(notes);
+    }
+
+    public void updatePin(Notes notes,boolean pin){
+        roomRepository.updatePin(notes,pin);
     }
 
 }

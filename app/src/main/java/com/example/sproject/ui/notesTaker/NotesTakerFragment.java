@@ -66,7 +66,7 @@ public class NotesTakerFragment extends Fragment {
         notes.setTitle(title);
         notes.setNotes(description);
         notes.setDate(formatter.format(date));
-        ideaViewModel.updateNote(notes);
+        ideaViewModel.addNote(notes);
         NavHostFragment.findNavController(this).navigate(R.id.action_notesTakerFragment_to_navigation_ideas);
     }
 

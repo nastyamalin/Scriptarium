@@ -2,9 +2,12 @@ package com.example.sproject.ui.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.PopupMenu;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -113,34 +116,6 @@ public class IdeaFragment extends Fragment {
 
     }
 
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if (requestCode == 101) {
-//            if (resultCode == Activity.RESULT_OK) {
-//                Notes new_notes;
-//                if (data != null) {
-//                    new_notes = (Notes) data.getSerializableExtra("note");
-//                    database.mainDAO().insert(new_notes);
-//                    notes.clear();
-//                    notes.addAll(database.mainDAO().getAll());
-//                    notesListAdapter.notifyDataSetChanged();
-//                }
-//            }
-//        } else if (requestCode == 102) {
-//            if (resultCode == Activity.RESULT_OK) {
-//                Notes new_notes;
-//                if (data != null) {
-//                    new_notes = (Notes) data.getSerializableExtra("note");
-//                    database.mainDAO().update(Objects.requireNonNull(new_notes).getID(), new_notes.getTitle(), new_notes.getNotes());
-//                    notes.clear();
-//                    notes.addAll(database.mainDAO().getAll());
-//                    notesListAdapter.notifyDataSetChanged();
-//                }
-//            }
-//        }
-//    }
 
     private void updateRecycler(List<Notes> notes) {
         notesListAdapter = new NotesListAdapter(requireContext(), notes, notesClickListener);
@@ -157,39 +132,45 @@ public class IdeaFragment extends Fragment {
         public void onLongClick(Notes notes, CardView cardView) {
             selectedNote = new Notes();
             selectedNote = notes;
-//            showPopup(cardView);
+            showPopup(cardView);
         }
     };
 
-//    private void showPopup(CardView cardView) {
-//        PopupMenu popupMenu = new PopupMenu(requireContext(), cardView);
-//        popupMenu.setOnMenuItemClickListener(this);
-//        popupMenu.inflate(R.menu.popup_menu);
-//        popupMenu.show();
-//    }
+    private void showPopup(CardView cardView) {
+        PopupMenu popupMenu = new PopupMenu(requireContext(), cardView);
+        popupMenu.setOnMenuItemClickListener(this::onMenuItemClick);
+        popupMenu.inflate(R.menu.popup_menu);
+        popupMenu.show();
+    }
 
-//    @Override
-//    public boolean onMenuItemClick(MenuItem menuItem) {
-//        if (menuItem.getItemId() == R.id.pin) {
-//            if (selectedNote.isPinned()) {
-//                database.mainDAO().pin(selectedNote.getID(), false);
-//                Toast.makeText(requireContext(),
-//                        "Unpinned!",
-//                        Toast.LENGTH_SHORT).show();
-//            } else {
-//                database.mainDAO().pin(selectedNote.getID(), true);
-//                Toast.makeText(requireContext(), "Pinned", Toast.LENGTH_SHORT).show();
-//            }
-//            notes.clear();
-//            notes.addAll(database.mainDAO().getAll());
-//            notesListAdapter.notifyDataSetChanged();
-//            return true;
-//        } else if (menuItem.getItemId() == R.id.delete) {
-//
-//        }
-//        return false;
-//    }
+    private boolean onMenuItemClick(MenuItem menuItem) {
+        if (menuItem.getItemId() == R.id.pin) {
+            if (selectedNote.isPinned()) {
+                ideaViewModel.updatePin(selectedNote,false);
+                Toast.makeText(requireContext(),
+                        "Unpinned!",
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                ideaViewModel.updatePin(selectedNote,false);
+                Toast.makeText(requireContext(), "Pinned", Toast.LENGTH_SHORT).show();
+            }
+            ideaViewModel.getNotesList();
+            ideaViewModel.notesList.observe(getViewLifecycleOwner(), notes -> notesListAdapter.setList(notes));
+            return true;
+        } else if (menuItem.getItemId() == R.id.delete) {
 
+        }
+        return false;
+    }
+
+
+    private void showEmptyAnimation() {
+        if (notesListAdapter.getItemCount() == 0) {
+            binding.emptyAnimationHome.setVisibility(View.VISIBLE);
+        } else {
+            binding.emptyAnimationHome.setVisibility(View.GONE);
+        }
+    }
 
     @Override
     public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
@@ -204,14 +185,6 @@ public class IdeaFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
-    }
-
-    private void showEmptyAnimation() {
-        if (notesListAdapter.getItemCount() == 0) {
-            binding.emptyAnimationHome.setVisibility(View.VISIBLE);
-        } else {
-            binding.emptyAnimationHome.setVisibility(View.GONE);
-        }
     }
 
 
