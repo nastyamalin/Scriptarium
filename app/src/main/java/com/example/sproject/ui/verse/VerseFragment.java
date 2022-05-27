@@ -38,7 +38,7 @@ public class VerseFragment extends Fragment {
     private static int counter = 0;
     private VerseViewModel verseViewModel;
     private Object VerseClickListener;
-
+    public static final String VERSE = "notes";
 
     @Override
     public void onStart() {
@@ -130,7 +130,9 @@ public class VerseFragment extends Fragment {
     private final VerseClickListener verseClickListener = new VerseClickListener() {
         @Override
         public void onClick(Verse verse) {
-
+            Bundle args = new Bundle();
+            args.putSerializable(VERSE,verse);
+            navController.navigate(R.id.action_navigation_favorites_to_verseTakerFragment,args);
         }
 
         @Override

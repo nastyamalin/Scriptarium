@@ -37,6 +37,7 @@ public class IdeaFragment extends Fragment {
     private IdeaViewModel ideaViewModel;
     private NavController navController;
     private static int counter = 0;
+    public static final String NOTES = "notes";
 
     @Override
     public void onStart() {
@@ -125,7 +126,9 @@ public class IdeaFragment extends Fragment {
     private final NotesClickListener notesClickListener = new NotesClickListener() {
         @Override
         public void onClick(Notes notes) {
-
+            Bundle args = new Bundle();
+            args.putSerializable(NOTES,notes);
+            navController.navigate(R.id.action_navigation_ideas_to_notesTakerFragment,args);
         }
 
         @Override

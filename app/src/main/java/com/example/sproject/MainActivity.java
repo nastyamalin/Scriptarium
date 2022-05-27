@@ -11,6 +11,8 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.sproject.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.Objects;
+
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_ideas, R.id.navigation_favorites, R.id.navigation_materials)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 

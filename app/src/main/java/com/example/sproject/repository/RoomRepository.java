@@ -35,12 +35,20 @@ public class RoomRepository {
         new Thread(() -> verseArrayList = verseDAO.getAll()).start();
         return  verseArrayList;
     }
-    public void updateNote(Notes notes){
+    public void updateNote(Notes notes) {
+        new Thread(() -> mainDAO.update(notes.getID(),notes.getTitle(),notes.getNotes())).start();
+    }
 
     public void addNote(Notes notes){
+
         new Thread(() -> mainDAO.insert(notes)).start();
     }
+
     public  void updateVerse(Verse verse){
+        new Thread(() -> verseDAO.update(verse.getID(),verse.getTitle(),verse.getVerse())).start();
+    }
+
+    public  void addVerse(Verse verse){
         new Thread(() -> verseDAO.insert(verse)).start();
     }
 

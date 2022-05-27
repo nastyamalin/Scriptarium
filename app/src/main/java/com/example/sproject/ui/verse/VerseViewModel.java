@@ -22,7 +22,10 @@ public class VerseViewModel extends ViewModel {
     }
 
     public void updateVerse(Verse verse) {
-        roomRepository.updateVerse(verse);
+        if (verse.getID() != 0)
+            roomRepository.updateVerse(verse);
+        else
+            roomRepository.addVerse(verse);
     }
 
 }

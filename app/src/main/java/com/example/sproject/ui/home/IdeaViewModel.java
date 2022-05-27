@@ -22,11 +22,14 @@ public class IdeaViewModel extends ViewModel {
     }
 
     public void addNote(Notes notes) {
-        roomRepository.addNote(notes);
+        if (notes.getID() == 0)
+            roomRepository.addNote(notes);
+        else
+            roomRepository.updateNote(notes);
     }
 
-    public void updatePin(Notes notes,boolean pin){
-        roomRepository.updatePin(notes,pin);
+    public void updatePin(Notes notes, boolean pin) {
+        roomRepository.updatePin(notes, pin);
     }
 
 }
