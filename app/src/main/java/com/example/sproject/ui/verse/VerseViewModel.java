@@ -28,4 +28,7 @@ public class VerseViewModel extends ViewModel {
             roomRepository.addVerse(verse);
     }
 
+    public void delete(Verse verse) {
+        roomRepository.deleteVerse(verse);
+    }
 }

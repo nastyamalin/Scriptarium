@@ -1,5 +1,7 @@
 package com.example.sproject.ui.home;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -133,38 +135,48 @@ public class IdeaFragment extends Fragment {
 
         @Override
         public void onLongClick(Notes notes, CardView cardView) {
-            selectedNote = new Notes();
-            selectedNote = notes;
-            showPopup(cardView);
+//            selectedNote = new Notes();
+//            selectedNote = notes;
+//            showPopup(cardView);
+            AlertDialog adb = new AlertDialog.Builder(requireContext()).create();
+            adb.setTitle("Delete");
+            adb.setButton(AlertDialog.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    ideaViewModel.delete(notes);
+                    adb.dismiss();
+                }
+            });
+            adb.show();
         }
     };
 
-    private void showPopup(CardView cardView) {
-        PopupMenu popupMenu = new PopupMenu(requireContext(), cardView);
-        popupMenu.setOnMenuItemClickListener(this::onMenuItemClick);
-        popupMenu.inflate(R.menu.popup_menu);
-        popupMenu.show();
-    }
-
-    private boolean onMenuItemClick(MenuItem menuItem) {
-        if (menuItem.getItemId() == R.id.pin) {
-            if (selectedNote.isPinned()) {
-                ideaViewModel.updatePin(selectedNote,false);
-                Toast.makeText(requireContext(),
-                        "Unpinned!",
-                        Toast.LENGTH_SHORT).show();
-            } else {
-                ideaViewModel.updatePin(selectedNote,false);
-                Toast.makeText(requireContext(), "Pinned", Toast.LENGTH_SHORT).show();
-            }
-            ideaViewModel.getNotesList();
-            ideaViewModel.notesList.observe(getViewLifecycleOwner(), notes -> notesListAdapter.setList(notes));
-            return true;
-        } else if (menuItem.getItemId() == R.id.delete) {
-
-        }
-        return false;
-    }
+//    private void showPopup(CardView cardView) {
+//        PopupMenu popupMenu = new PopupMenu(requireContext(), cardView);
+//        popupMenu.setOnMenuItemClickListener(this::onMenuItemClick);
+//        popupMenu.inflate(R.menu.popup_menu);
+//        popupMenu.show();
+//    }
+//
+//    private boolean onMenuItemClick(MenuItem menuItem) {
+//        if (menuItem.getItemId() == R.id.pin) {
+//            if (selectedNote.isPinned()) {
+//                ideaViewModel.updatePin(selectedNote,false);
+//                Toast.makeText(requireContext(),
+//                        "Unpinned!",
+//                        Toast.LENGTH_SHORT).show();
+//            } else {
+//                ideaViewModel.updatePin(selectedNote,false);
+//                Toast.makeText(requireContext(), "Pinned", Toast.LENGTH_SHORT).show();
+//            }
+//            ideaViewModel.getNotesList();
+//            ideaViewModel.notesList.observe(getViewLifecycleOwner(), notes -> notesListAdapter.setList(notes));
+//            return true;
+//        } else if (menuItem.getItemId() == R.id.delete) {
+//
+//        }
+//        return false;
+//    }
 
 
     private void showEmptyAnimation() {

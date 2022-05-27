@@ -32,4 +32,7 @@ public class IdeaViewModel extends ViewModel {
         roomRepository.updatePin(notes, pin);
     }
 
+    public void delete(Notes notes) {
+        roomRepository.deleteNotes(notes);
+    }
 }

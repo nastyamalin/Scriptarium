@@ -1,5 +1,7 @@
 package com.example.sproject.ui.verse;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -94,7 +96,7 @@ public class VerseFragment extends Fragment {
         verseViewModel.verseList.observe(getViewLifecycleOwner(), verseList -> {
             verse = verseList;
             updateRecycler(verseList);
-            //showEmptyAnimation();
+            showEmptyAnimation();
             setSearch();
         });
 
@@ -137,9 +139,19 @@ public class VerseFragment extends Fragment {
 
         @Override
         public void onLongClick(Verse verse, CardView cardView) {
-            selectedVerse = new Verse();
-            selectedVerse = verse;
+//            selectedVerse = new Verse();
+//            selectedVerse = verse;
 //            showPopup(cardView);
+            AlertDialog adb = new AlertDialog.Builder(requireContext()).create();
+            adb.setTitle("Delete");
+            adb.setButton(AlertDialog.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    verseViewModel.delete(verse);
+                    adb.dismiss();
+                }
+            });
+            adb.show();
         }
     };
 
@@ -158,12 +170,12 @@ public class VerseFragment extends Fragment {
         }
         counter++;
     }
-//    private void showEmptyAnimation() {
-//        if (verseListAdapter.getItemCount() == 0) {
-//            binding.emptyAnimationHome.setVisibility(View.VISIBLE);
-//        } else {
-//            binding.emptyAnimationHome.setVisibility(View.GONE);
-//        }
-//    }
+    private void showEmptyAnimation() {
+        if (verseListAdapter.getItemCount() == 0) {
+            binding.emptyAnimationFavourites.setVisibility(View.VISIBLE);
+        } else {
+            binding.emptyAnimationFavourites.setVisibility(View.GONE);
+        }
+    }
 
 }

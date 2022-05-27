@@ -55,4 +55,12 @@ public class RoomRepository {
     public void updatePin(Notes notes,boolean pin){
         new Thread(() -> mainDAO.pin(notes.getID(),pin)).start();
     }
+
+    public void deleteNotes(Notes notes) {
+        new Thread(() -> mainDAO.delete(notes)).start();
+    }
+
+    public void deleteVerse(Verse verse) {
+        new Thread(() -> verseDAO.delete(verse)).start();
+    }
 }
