@@ -33,7 +33,7 @@
         android:layout_margin="16dp"
         android:background="@color/purple"
         android:iconifiedByDefault="false"
-        android:queryHint="Search Notes..."
+        android:queryHint="Search Ideas..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
